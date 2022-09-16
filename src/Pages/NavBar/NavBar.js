@@ -15,10 +15,10 @@ const NavBar = () => {
     window.addEventListener('scroll', changeBackground);
 
     return (
-        <div className={navBar ? 'navBar active z-50' : 'navBar'}>
+        <div className={navBar ? 'navBar active' : 'navBar'}>
             <div className="text-start">
                 <div className="dropdown">
-                    <label tabIndex="0" className="btn btn-ghost lg:hidden">
+                    <label tabIndex="0" className="btn lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -30,11 +30,16 @@ const NavBar = () => {
                 </div>
             </div>
 
-            <div className="navbar-start hidden lg:flex">
-                <ul className="menu menu-horizontal p-0 font-bold">
+            <div className="text-left">
+                <ul className="text-left menu menu-horizontal p-0 font-bold">
                     <li>
-                        <NavLink to='/' className={({ isActive }) => isActive ? 'text-white' : 'white'}>HOME</NavLink>
-                        {/* <NavLink to='/home' className={({ isActive }) => isActive ? 'text-warning' : 'white'}>HOME</NavLink> */}
+                        <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-5' : 'white ml-5'}>Pricing</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-5' : 'white ml-5'}>FAQs</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-5' : 'white ml-5'}>Home</NavLink>
                     </li>
 
 

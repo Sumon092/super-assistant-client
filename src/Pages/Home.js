@@ -1,10 +1,14 @@
 import React from 'react';
-import NavBar from './NavBar/NavBar';
 
 const Home = () => {
     return (
-        <div className='flex justify-center'>
-            <h2 className='flex justify-center text-3xl font-bold text-navy'>Well Come to Super Assistant</h2>
+        <div className='h-screen'>
+            <h2 className='text-5xl font-bold text-center mt-12'>Fully Automated Exam Proctoring</h2>
+            <h3 className='text-center text-3xl mt-5 font-mono'>No More Cheating Online Test</h3>
+            <div className='flex justify-center items-center mt-10'>
+                <button className='btn btn-accent btn-wide font-bold'>Take Demo Test</button>
+                <button className='btn btn-success font-bold  ml-5 btn-wide'>Create Test</button>
+            </div>
         </div>
     );
 };

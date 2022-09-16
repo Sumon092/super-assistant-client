@@ -11,12 +11,15 @@ import NavBar from './Pages/NavBar/NavBar';
 function App() {
   return (
     <>
-      <NavBar></NavBar>
-      <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
-        {/* <Route path='/home' element={<Home></Home>}></Route> */}
+      <div style={{ backgroundColor: "rgb(224,242,254)" }}>
+        <NavBar></NavBar>
+        <Routes>
+          <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/home' element={<Home></Home>}></Route>
 
-      </Routes>
+        </Routes>
+      </div>
+
     </>
 
 
