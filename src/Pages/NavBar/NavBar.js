@@ -38,30 +38,24 @@ const NavBar = () => {
                 </div>
             </div>
 
-            <div className="text-left">
-                <ul className="text-left menu menu-horizontal p-0 font-bold">
-                    <li>
-                        <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-5' : 'white ml-5'}>Pricing</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-5' : 'white ml-5'}>FAQs</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-5' : 'white ml-5'}>Home</NavLink>
-                    </li>
+            <div className="flex justify-between items-center h-14 w-screen">
+                <div>
+                    <h2 className='text-2xl font-bold text-white ml-12 font-sans'>Super Proctor</h2>
+                </div>
+                <div className='text-end font-bold mr-12'>
+                    <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-7' : 'text-white ml-5'}>Home</NavLink>
+                    <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-7' : 'white ml-5'}>Pricing</NavLink>
+                    <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-7' : 'white ml-5'}>FAQs</NavLink>
 
                     {
-                        user ? <button onClick={handleSignOut} className=" text-center border-0 text-white ml-3" >Sign out</button> :
+                        user ? <button onClick={handleSignOut} className=" text-center border-0 text-white ml-7" >Sign out</button> :
 
-                            <Link className='text-white mt-3 ml-3' to="/googleSignIn">
+                            <Link className='text-white mt-3 ml-7' to="/googleSignIn">
                                 Sign In
                             </Link>
-
                     }
 
-
-
-                </ul>
+                </div>
             </div>
         </div>
     );
