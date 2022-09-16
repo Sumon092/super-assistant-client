@@ -7,6 +7,7 @@ import './NavBar.css'
 
 
 const NavBar = () => {
+
     const [user] = useAuthState(auth);
     const handleSignOut = () => {
         signOut(auth)
@@ -48,16 +49,16 @@ const NavBar = () => {
                     <li>
                         <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-5' : 'white ml-5'}>Home</NavLink>
                     </li>
-                    <NavLink>
 
+                    {
+                        user ? <button onClick={handleSignOut} className=" text-center border-0 text-white ml-3" >Sign out</button> :
 
-                        {
-                            user ? <button onClick={handleSignOut} className="text-decoration-none text-primary text-center bg-dark border-0 text-white" >Sign out</button> :
-                                <NavLink as={Link} to="/googleSignIn">
-                                    Sign In
-                                </NavLink>
-                        }
-                    </NavLink>
+                            <Link className='text-white mt-3 ml-3' to="/googleSignIn">
+                                Sign In
+                            </Link>
+
+                    }
+
 
 
                 </ul>

@@ -3,6 +3,7 @@ import auth from '../../firebase.Init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import GoogleLogo from '../../Assets/google.png'
+import LoginImage from '../../Assets/Mobile-login-Cristina.jpg'
 
 const GoogleSignIn = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -19,15 +20,23 @@ const GoogleSignIn = () => {
 
 
     return (
-        <div className='h-screen'>
-            {errorElement}
-            <div className="google-logo">
-                <button onClick={() => signInWithGoogle()} className='d-flex align-items-center justify-content-between google-button'>
-                    <img style={{}} src={GoogleLogo} alt="" />
-                    <span className='google-text fw-bold'>Sign In with google</span>
-                </button>
+        <>
+            <div className='h-screen flex justify-center items-center'>
+
+
+                <div>
+                    <img style={{ width: '300px' }} src={LoginImage} alt="" />
+                </div>
+                <div >
+                    <button onClick={() => signInWithGoogle()} className='btn btn-info ml-5 flex items-center justify-center google-button'>
+                        <img style={{ width: '30px' }} src={GoogleLogo} alt="" />
+                        <span className='font-bold text-xl ml-3 p-3'>Sign In with google</span>
+                    </button>
+                </div>
+
             </div>
-        </div>
+            {errorElement}
+        </>
 
     );
 };
