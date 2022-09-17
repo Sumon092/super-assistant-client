@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "name": "Question Number 1",
+        "Ans1": [
+            {
+                "option1": "Answer one",
+                "option2": "Answer two",
+                "option3": "Answer three"
+            }
+        ],
+        "marks": "2"
+    },
+    {
+        "id": "2",
+        "name": "Question Number 2",
+        "Ans1": [
+            {
+                "option1": "Answer one",
+                "option2": "Answer two",
+                "option3": "Answer three"
+            }
+        ],
+        "marks": "2"
+    },
+    {
+        "id": "3",
+        "name": "Question Number 3",
+        "Ans1": [
+            {
+                "option1": "Answer one",
+                "option2": "Answer two",
+                "option3": "Answer three"
+            }
+        ],
+        "marks": "2"
+    }
+]

@@ -46,6 +46,7 @@ const NavBar = () => {
                     <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-7' : 'text-white ml-5'}>Home</NavLink>
                     <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-7' : 'white ml-5'}>Pricing</NavLink>
                     <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-7' : 'white ml-5'}>FAQs</NavLink>
+                    <NavLink to='/dashboard' className={({ isActive }) => isActive ? 'text-white ml-7' : 'white ml-5'}>Dashboard</NavLink>
 
                     {
                         user ? <button onClick={handleSignOut} className=" text-center border-0 text-white ml-7" >Sign out</button> :
