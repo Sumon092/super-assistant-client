@@ -11,7 +11,7 @@ const RequiredAuth = ({ children }) => {
         return <Loading></Loading>
     }
     if (!user) {
-        return <Navigate to="/signIn" state={{ from: location }} replace />;
+        return <Navigate to="/googleSignIn" state={{ from: location }} replace />;
     }
     return children;
 };

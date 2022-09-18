@@ -23,7 +23,7 @@ const NavBar = () => {
     window.addEventListener('scroll', changeBackground);
 
     return (
-        <div className={navBar ? 'navBar active' : 'navBar'}>
+        <div className={navBar ? 'navBar active z-50' : 'navBar z-50'}>
             <div className="text-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn lg:hidden">
@@ -43,6 +43,7 @@ const NavBar = () => {
                     <h2 className='text-2xl font-bold text-white ml-12 font-sans'>Super Proctor</h2>
                 </div>
                 <div className='text-end font-bold mr-12'>
+                   
                     <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-7' : 'text-white ml-5'}>Home</NavLink>
                     <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-7' : 'white ml-5'}>Pricing</NavLink>
                     <NavLink to='/' className={({ isActive }) => isActive ? 'text-white ml-7' : 'white ml-5'}>FAQs</NavLink>
